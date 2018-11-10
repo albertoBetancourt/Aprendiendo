@@ -1,0 +1,39 @@
+.encab
+{
+    background:#1f4287;
+    color: white;
+}
+.elem-enc
+{
+    padding: 10px 4px;
+    text-align: center;
+}
+.elem-enc:hover
+{
+    background:#071e3d;
+}
+.link-enc
+{
+    color: white;
+}
+.link-enc:hover
+{
+    color:#21e6c1;
+}
+.header-hotel
+{
+    background: #278ea5;
+}
+.titulo-pagina
+{
+    padding: 10px 10px 10px 0px;
+}
+.padre
+{
+    display: flex;
+    justify-content: space-between;
+}
+.responsivee
+{
+    width: 
+}
