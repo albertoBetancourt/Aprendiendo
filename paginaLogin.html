@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hotel Paraiso</title>
+    <title>Iniciar Sesión</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/EstilosPaginaLogin.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -17,8 +18,8 @@
             <div class="col-6 col-sm-3 col-md-2 elem-enc">
                 <a href="#" class="link-enc">Regristrarse</a>
             </div>
-            <div class="col-6 col-sm-3 col-md-2 elem-enc">
-                    <a href="paginaLogin.html" class="link-enc">Iniciar Sesión</a>
+            <div class="col-6 col-sm-3 col-md-2 elem-enc estasaAqui">
+                    <a href="#" class="link-enc">Iniciar Sesión</a>
             </div>
         </div>
     </div>
@@ -67,27 +68,40 @@
                 </div>
             </a>
     </nav>
-    <!-- seccion de descripcion e imagen del hotel -->
+    <!-- seccion de Inicio de sección o registro -->
     <div>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 d-inline-block align-top"> 
-                <p class="info-hotel">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt blanditiis totam praesentium adipisci illo asperiores ipsum sequi ullam obcaecati velit odit eum repudiandae minus odio provident, aliquid qui assumenda.
-                </p>
-                <p class="info-hotel">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere nisi delectus itaque voluptates nesciunt, officiis fugit, illo nulla numquam dolorum ad laudantium debitis! Assumenda quos dicta cupiditate ipsum commodi.
-                </p>
-                <p class="info-hotel">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur facere nisi delectus itaque voluptates nesciunt, officiis fugit, illo nulla numquam dolorum ad laudantium debitis! Assumenda quos dicta cupiditate ipsum commodi.
-                </p>
-                <p class="info-hotel">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla officiis aperiam architecto aut sunt fugiat fuga qui modi adipisci, unde impedit cum quis, ullam incidunt, repellat maiores nemo dolores obcaecati.
-                </p>
-            </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                    <img src="img/gaylord-palms.jpg" width="658" height=480" class="d-inline-block align-top img-responsive" alt="">
-            </div>
-        </div>
+       <div class="row">
+           <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
+           <div class="col-12 cos-sm-6 col-md-6 col-lg-6 formularioInic">
+                <form>
+                    <div class="form-group">
+                    <label for="NmUsuario">Usuario</label>
+                    <input type="text" class="form-control" id="NmUsuario" aria-describedby="AyudaNombre" placeholder="Ingrese Nombre de Usuario">
+                    <small id="AyudaNombre" class="form-text text-muted">Nunca compartiremos tu usuario con alguien.</small>
+                    </div>
+                    <div class="form-group">
+                    <label for="Contraseña">Contraseña</label>
+                    <input type="password" class="form-control" id="Contraseña" placeholder="Ingrese su Contraseña">
+                    </div>
+                    <!-- <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+              </form>
+           </div>
+           <div class="col-12 col-sm-3 col-md-3 col-lg-3"></div>
+       </div>
+       <div class="row recregistro">
+           <div class="col-12 col-sm-4 col-md-4 col-lg-4"></div>
+           <div class="col-12 col-sm-3 col-md-3 col-lg-3 ">
+               <h5>¿Aún no tienes una cuenta? </h5>
+           </div>
+           <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+                <a class="btn btn-primary" href="#" role="button">Regristrarse</a>
+           </div>
+           <div class="col-12 col-sm-4 col-md-4 col-lg-4"></div>
+       </div>
     </div>
     <!-- footer de la pagina -->
     <footer>
