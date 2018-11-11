@@ -1,0 +1,41 @@
+.formularioReg
+{
+    margin: 10px 5px 35px 5px ;
+}
+.estasaAqui
+{
+    background:#071e3d;
+}
+.estasaAqui:hover
+{
+    background:#05004e;
+}
+.tituloReg
+{
+    text-align: center;
+    padding: 10px 0px;
+}
+.campoRegistro
+{
+    padding: 5px 10px;
+}
+.botonreg
+{
+    padding: 10px 0px;
+}
+.botonregistro
+{
+    margin: 10px 0px;
+}
+.sexo
+{
+    padding: 35px 0px 0px 5px;
+}
+.sexo-opcion
+{
+    margin: 0px 10px 0px 0px;
+}
+.cuentaexist
+{
+    padding:  10px 0px 5px 5px;
+}

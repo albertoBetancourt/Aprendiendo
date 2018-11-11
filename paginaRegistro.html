@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilosPaginaRegistro.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+</head>
+<body>
+    <!-- primer navbar -->
+    <div class="encab">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-8"></div>
+            <div class="col-6 col-sm-3 col-md-2 elem-enc estasaAqui">
+                <a href="paginaRegistro.html" class="link-enc">Regristrarse</a>
+            </div>
+            <div class="col-6 col-sm-3 col-md-2 elem-enc">
+                    <a href="paginaLogin.html" class="link-enc">Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+    <!-- header de la pagina -->
+    <header>
+        <nav class="navbar navbar-light header-hotel">
+                <a class="navbar-brand" href="index.html">
+                    <div class="row">
+                        <div class="col-12 col-sm-3 col-md-3 ">
+                                <img src="img/hotel.png" width="80" height=80" class="d-inline-block align-top" alt="">
+                        </div>
+                        <div class="col-12 col-sm-3 col-md-3">
+                                <h1 class="d-inline-block titulo-pagina">Hotel Paraiso</h1>  
+                        </div>
+                    </div>
+                </a>
+        </nav>
+    </header>
+    <!-- segundo navbar -->
+    <nav class="navbar navbar-dark sec-navbar">
+            <a class="navbar-brand" href="index.html">
+            <div class="row">
+                <div class="col-12 col-sm-3 col-md-3 sec-navb-h2">
+                    Inicio
+                </div>
+            </div>
+            </a>
+            <a class="navbar-brand" href="#">
+                <div class="row ">
+                    <div class="col-12 col-sm-12 col-md-3 sec-navb-h2">
+                        Habitaciones
+                    </div>
+                </div>
+            </a>
+            <a class="navbar-brand" href="#">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-4">
+                    </div>
+                </div>
+            </a>
+            <a class="navbar-brand" href="#">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-2">
+                            <img src="img/3stars.png" width="50" height=42" class="d-inline-block align-top" alt="">
+                    </div>
+                </div>
+            </a>
+    </nav>
+    <!-- seccion de registro -->
+    <div>
+        
+        <div class="row">
+           <div class="col-12 cos-sm-12 col-md-12 col-lg-12 formularioReg">
+                <div class="container"></div>
+                <form>
+                    <!-- Titulo formulario -->
+                    <div class="row">
+                        <div class="col-12 cos-sm-3 col-md-3 col-lg-3"></div>
+                        <div class="col-12 cos-sm-6 col-md-6 col-lg-6">
+                            <h3 class="tituloReg">Registro</h3>
+                        </div>
+                        <div class="col-12 cos-sm-3 col-md-3 col-lg-3"></div>
+                    </div>
+                    <!-- seccion de ingreso de usuario y email -->
+                    <div class="row">
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5 campoRegistro">
+                                <div class="form-group">
+                                <label for="NmUsuario">Usuario</label>
+                                <input type="text" class="form-control" id="NmUsuario" placeholder="Ingrese Nombre de Usuario">
+                                </div>
+                        </div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5 campoRegistro">
+                                <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" placeholder="Ingrese su correo">
+                                </div>
+                        </div>
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                    </div>
+                    <!-- seccion de ingreso y confirmación de contraseña -->
+                    <div class="row">
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5 campoRegistro">
+                                <div class="form-group">
+                                <label for="Contraseña">Contraseña</label>
+                                <input type="password" class="form-control" id="Contraseña" placeholder="Ingrese su Contraseña">
+                                </div>
+                        </div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5 campoRegistro">
+                                <div class="form-group">
+                                <label for="CContraseña">Confirmar Contraseña</label>
+                                <input type="password" class="form-control" id="CContraseña" placeholder="Ingrese su Contraseña de nuevo">
+                                </div>
+                        </div>
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                    </div>
+
+
+                    <!-- sección selección fecha de nacimiento y sexo -->
+                    <div class="row">
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5">
+                                <label for="fechaNac">Fecha nacimiento</label>
+                                <div class="input-group date" data-provide="datepicker">
+                                    <input type="text" class="form-control" id="ejemploi">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-11 cos-sm-5 col-md-5 col-lg-5 sexo">
+                            <label class="sexo-opcion">Género:</label>
+                            <div class="form-check form-check-inline" id="genero">
+                                <input class="form-check-input " type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label " for="inlineCheckbox1">Hombre</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Mujer</label>
+                        </div>
+                        <div class="col-12 cos-sm-1 col-md-1 col-lg-1"></div>
+                        
+                    </div>
+                    <!-- <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div> -->
+                </form>
+                </div>
+                <!-- boton confirmar registro -->
+                <div class="row botonreg">
+                    <div class="col-12 cos-sm-4 col-md-4 col-lg-4"></div>
+                    <div class="col-12 cos-sm-4 col-md-4 col-lg-4 botonregistro d-flex align-items-center justify-content-center"> 
+                        <button type="submit" class="btn btn-primary">Regristrarse</button>
+                    </div>
+                    <div class="col-12 cos-sm-4 col-md-4 col-lg-4"></div>
+                </div>
+                <!-- ya tienes cuenta? -->
+                <div class="row cuentaexist">
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4"></div>
+                        <div class="col-12 col-sm-3 col-md-3 col-lg-3 d-flex align-items-center justify-content-center">
+                            <h5>¿Ya tienes una cuenta? </h5>
+                        </div>
+                        <div class="col-12 col-sm-1 col-md-1 col-lg-1 d-flex align-items-center justify-content-center">
+                             <a class="btn btn-primary" href="paginaLogin.html" role="button">Ingresar</a>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-4 col-lg-4"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer de la pagina -->
+    <footer>
+        <div>
+            <div class="row">
+                <div class="col-12 footer-sty2">
+                    <h4 class="footer-style">Via Ricaurte - Agua de rios, KM2</h4>
+                    <h4 class="footer-style">Cels: 313-131-1312 - 321-123-4675</h4>
+                    <h4 class="footer-style">País de las maravillas</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/bootstrap-datepicker.es.min.js"></script>
+    <script type="text/javascript">
+        $('#ejemploi').datepicker({
+        format: 'dd/mm/yyyy'
+        });
+    </script>
+</body>
+</html>
