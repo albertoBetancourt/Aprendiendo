@@ -1,3 +1,4 @@
+/* estilos para el primer navbar */
 .encab
 {
     background:#1f4287;
@@ -20,6 +21,7 @@
 {
     color:#21e6c1;
 }
+/* estilos para el header del hotel */
 .header-hotel
 {
     background: #278ea5;
@@ -27,6 +29,11 @@
 .titulo-pagina
 {
     padding: 10px 10px 10px 0px;
+}
+/* estilos para el segundo navbar */
+.sec-navbar
+{
+    background: #1f4287;
 }
 .padre
 {
@@ -36,4 +43,30 @@
 .responsivee
 {
     width: 
+}
+.sec-navb-h2:hover
+{
+    color:#21e6c1;
+}
+/* estilos para info hotel body */
+.info-hotel
+{
+    padding: 10px 5px 0px 8px;
+}
+.img-responsive
+{
+    width: 100%;
+    height: 100%;
+}
+/* estilos para el footer de la pagina */
+.footer-style
+{
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    color: azure;
+}
+.footer-sty2
+{
+    padding: 10px 0px;
+    background: #071e3d;
 }
