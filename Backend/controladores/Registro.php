@@ -2,38 +2,33 @@
 	include_once("../Models/Usuario.php");
 	class Registro
 	{
-		private $id;
-		private $nombre;
-		private $apellido;
-		private $nickname;
+		private $nombres;
+		private $apellidos;
+		private $username;
+		private $cedula;
 		private $email;
-		private $genero;
+		private $contrasenia;
 		private $fechaNacimiento;
-		private $usuario;
-		private $contrasena;
+		private $genero;
+		private $ciudad;
+		private $pais;
 		
-		public function __construct($usrID, $usrNombre, $usrApellido, $usrNickName, $usrEmail, $usrGenero, $usrFechaNacimiento, $usrContrasena)
+		public function __construct($nombres, $apellidos, $username, $cedula, $email, $contrasenia, $fechaNacimiento, $genero, $ciudad, $pais)
 		{
-			$this->id = $usrID;
-			$this->nombre = $usrNombre;
-			$this->apellido = $usrApellido;
-			$this->nickname = $usrNickName;
-			$this->email = $usrEmail;
-			$this->genero = $usrGenero;
-			$this->fechaNacimiento = $usrFechaNacimiento;
-			$this->contrasena = $usrContrasena;
+			$this->nombres = $nombres;
+			$this->apellidos = $apellidos;
+			$this->username = $username;
+			$this->cedula = $cedula;
+			$this->email = $email;
+			$this->contrasenia = $contrasenia;
+			$this->fechaNacimiento = $fechaNacimiento;
+			$this->genero = $genero;
+			$this->ciudad=$ciudad;
+			$this->pais=$pais;
 		}
 		public function registro()
 		{
-			$modelo = new Usuario();
-			$modelo->setUsrID($this->id);
-			$modelo->setUsrNombre($this->nombre);
-			$modelo->setUsrApellido($this->apellido);
-			$modelo->setUsrNickName($this->nickname);
-			$modelo->setUsrEmail($this->email);
-			$modelo->setUsrGenero($this->genero);
-			$modelo->setUsrFechaNacimiento($this->fechaNacimiento);
-			$modelo->setUsrContrasena($this->contrasena);
+			$modelo = new Usuario($this->nombres,$this->apellidos,$this->username,$this->cedula,$this->email,$this->contrasenia,$this->fechaNacimiento,$this->genero,$this->ciudad,$this->pais);
 			$respuesta = $modelo->registro();
 			if($respuesta)
 			{
@@ -48,6 +43,6 @@
 		}
 	}
 	$datos = $_REQUEST;
-	$Obj=new Registro($datos['id'],$datos['nombre'], $datos['apellido'], $datos['nickname'], $datos['email'], $datos['genero'], $datos['fechaNacimiento'], $datos['pass'] );
+	$Obj=new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'],$datos['ciudad'],$datos['pais'] );
 	$Obj->registro();
 ?>
