@@ -23,8 +23,8 @@
 			$this->contrasenia = $contrasenia;
 			$this->fechaNacimiento = $fechaNacimiento;
 			$this->genero = $genero;
-			$this->ciudad=$ciudad;
-			$this->pais=$pais;
+			$this->ciudad = $ciudad;
+			$this->pais = $pais;
 		}
 		public function registro()
 		{
