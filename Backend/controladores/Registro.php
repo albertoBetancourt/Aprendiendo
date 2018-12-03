@@ -2,6 +2,7 @@
 	include_once("../Models/Usuario.php");
 	class Registro
 	{
+<<<<<<< HEAD
 		private $nombres;
 		private $apellidos;
 		private $username;
@@ -41,6 +42,9 @@
 				echo "Se ha presentado un error en el registro";
 			}
 		}
+=======
+		
+>>>>>>> 6f8657cb4476fac243accbfe4410b6b363fdfe55
 	}
 	$datos = $_REQUEST;
 	$Obj=new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'],$datos['ciudad'],$datos['pais'] );

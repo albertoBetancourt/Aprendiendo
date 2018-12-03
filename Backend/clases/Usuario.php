@@ -2,34 +2,37 @@
 include_once(Conexion);
 class Usuario
 {
-    private $userId;
-    private $userNombre;
-    private $userNickname;
-    private $userContraseña;
-    private $userSexo;
-    private $userDireccionEmail;
-    private $userFechaNacimiento;
-    private $userCiudad;
-    private $userPais;
-    private $userFoto;
-    private $userAlbumes = array();
-    private $userReservas = array();
+    private $nombres;
+    private $apellidos;
+    private $username;
+    private $cedula;
+    private $email;
+    private $contrasenia;
+    private $fechaNacimiento;
+    private $genero;
+    private $ciudad;
+    private $pais;
+    private $fotoPerfil;
+
     
     
-    public function __construct($userId,$userNombre,$userNickname,$userContraseña,$userSexo,$userDireccionEmail,$userFechaNacimiento,$ciudad,$pais)
+    public function __construct($nombresU, $apellidosU, $usernameU, $cedulaU, $emailU, $contraseniaU, $fechaNacimientoU, $generoU, $ciudadU, $paisU)
     {
-        $this->userId = $userId;
-        $this->userNombre = $userNombre;
-        $this->userNickname = $userNickname;
-        $this->userContraseña = $userContraseña;
-        $this->userSexo = $userSexo;
-        $this->userDireccionEmail = $userDireccionEmail;
-        $this->userFechaNacimiento = $userFechaNacimiento;  
+        $this->nombres = $nombresU;
+        $this->apellidos = $apellidosU;
+        $this->username = $usernameU;
+        $this->cedula = $cedulaU;
+        $this->email = $emailU;
+        $this->contrasenia = $contraseniaU;
+        $this->fechaNacimiento = $fechaNacimientoU;
+        $this->genero = $generoU;
+        $this->ciudad = $ciudadU;
+        $this->pais = $paisU; 
     }
 
     public function registro()
     {
-        $Sql="insert into usuario (usr_id, usr_nombre, usr_apellido, usr_nickname, usr_email, usr_genero, usr_fechanacimiento, usr_contrasena) values 
+        $Sql="insert into usuarios (genero, userName, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email) values 
         ('".$this->getUsrID()."','".$this->getUsrNombre()."','".$this->getUsrApellido()."', '".$this->getUsrNickName()."', '".$this->getUsrEmail()."','".$this->getUsrGenero()."','".$this->getUsrFechaNacimiento()."', '".$this->getUsrContrasena()."');";
         if(!$this->verificarLlavePrimaria())
         {
