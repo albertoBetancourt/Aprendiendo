@@ -23,6 +23,7 @@ function verificarDatos()
 	var confirmacion = document.getElementById("confirmacion").value;
 	var hombre = document.getElementById("hombre");
 	var mujer = document.getElementById ("mujer");
+	var genero;
 	if (isNaN(cedula))
 	{
 		alert ("La cédula debe ser un valor numérico");
@@ -33,5 +34,26 @@ function verificarDatos()
 		alert ("La dos contraseñas deben coincidir");
 		return;
 	}
+	if (hombre.checked)
+	{
+		genero = "hombre";
+	}
+	else
+	{
+		if (mujer.checked)
+		{
+			genero = "mujer";
+		}
+		else
+		{
+			alert("No se seleccionó un género");
+			return;
+		}
+	}
+	
 	alert ("Datos correctos");
+	/**
+	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
+	 */
+	$.post("../../Backend/Registro.php/")
 }
