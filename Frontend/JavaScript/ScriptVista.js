@@ -50,10 +50,9 @@ function verificarDatos()
 			return;
 		}
 	}
-	
 	alert ("Datos correctos");
 	/**
 	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
 	 */
-	$.post("../../Backend/Registro.php/")
+	$.post("../../Backend/Registro.php/", {nombre:})
 }
