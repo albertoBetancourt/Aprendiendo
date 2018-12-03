@@ -6,7 +6,7 @@
         private $ftoRuta;
         private $ftoDescripcion;
 
-        public function __construct($ftoNombre, )
+        public function __construct( )
         {
 
         }

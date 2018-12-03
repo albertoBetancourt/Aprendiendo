@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie-edge">
+	<meta name="author" content="Jefferson Iles Arcos">
+	<link rel="stylesheet" href="../Includes/Bootstrap4/CSS/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="../CSS/Generales.css">
+	<link rel="stylesheet" href="../CSS/Registro.css">
+	<link rel="shortcut icon" href="../Imagenes/favicon.ico">
+	<script async="async" src="../JavaScript/ScriptVista.js"></script>
+	<title>Hotel | Registrarse</title>
+</head>
+
+<body class="Contenedor">
+
+	<header class="Contenedor">
+		<nav class="row align-items-center justify-content-end MenuAzul">
+			<a href="index.html">
+				<img src="../Imagenes/Logo.png" alt="Logo">
+			</a>
+			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzulActivo" href="Registro.html">Registrarse</a>
+			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzul" href="Login.html">Iniciar sesión</a>
+			<img class="col-5 col-sm-2 order-1 order-sm-last Categoria" src="../Imagenes/4.png" alt="Categoria" title="Categoria">
+		</nav>
+	</header>
+
+	<section>
+		<div class="row align-items-center justify-content-around">
+			<h2 class="col-10">Registro</h2>
+		</div>
+		<form method="POST">
+			<div class="row align-items-center justify-content-around">
+				<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="nombres" placeholder="Nombres">
+				<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="apellidos" placeholder="Apellidos">
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="usuario" placeholder="Usuario">
+				<input class="col-10 col-sm-8 col-md-5" type="number" name="datos" id="cedula" placeholder="Cédula">
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<input class="col-10 col-sm-8 col-md-5" type="email" name="datos" id="email" placeholder="Email">
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<input class="col-10 col-sm-8 col-md-5" type="password" name="datos" id="contrasenia" placeholder="Contraseña">
+				<input class="col-10 col-sm-8 col-md-5" type="password" name="datos" id="confirmacion" placeholder="Confirmar Contraseña">
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<div class="col-10 col-sm-8 col-md-5 Contenedor Fecha">
+					<label>Fecha de nacimiento:</label>
+					<input class="col" type="date" name="datos" id="fechaNacimiento" min="1918-01-01">
+				</div>
+				<div class="col-10 col-sm-8 col-md-5 Contenedor">
+					<label>Género:</label>
+					<div class="Contenedor OpcionRadio">
+						<input type="radio" name="datos" id="hombre" value="Hombre">
+						<label for="hombre">Hombre</label>
+					</div>
+					<div class="Contenedor OpcionRadio">
+						<input type="radio" name="datos" id="mujer" value="Mujer">
+						<label for="mujer">Mujer</label>
+					</div>
+				</div>
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="ciudad" placeholder="Ciudad de residencia">
+				<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="pais" placeholder="País de residencia">
+			</div>
+			<div class="row align-items-center justify-content-around">
+				
+			</div>
+			<div class="row align-items-center justify-content-around">
+				<input class="col-6 col-sm-4 col-md-2 Boton BotonAzul" type="button" id="enviar" value="Regístrate">
+			</div>
+		</form>
+		<div class="row align-items-center justify-content-center">
+			<label>¿Ya tienes una cuenta?</label>
+			<a class="col-4 col-md-2 Boton BotonAzul" id="login" href="Login.html">Ingresa</a>
+		</div>	
+	</section>
+
+	<footer>
+		<div class="row align-items-center justify-content-around">
+			<p class="col-10">Vía Ricaurte - Agua de Dios, Km 2</p>
+		</div>
+		<div class="row align-items-center justify-content-around">
+			<p class="col-10">Cel: 3229247604 - 3112420714</p>
+		</div>
+		<div class="row align-items-center justify-content-around">
+			<p class="col-10">País de las Maravillas</p>
+		</div>	
+	</footer>
+
+</body>
+
+</html>
