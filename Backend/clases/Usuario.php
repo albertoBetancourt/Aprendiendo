@@ -14,6 +14,8 @@ class Usuario
     private $pais;
     private $fotoPerfil;
 
+    private $connect; //Para hacer la conexion con la base de datos
+
     
     
     public function __construct($nombresU, $apellidosU, $usernameU, $cedulaU, $emailU, $contraseniaU, $fechaNacimientoU, $generoU, $ciudadU, $paisU)
@@ -27,13 +29,14 @@ class Usuario
         $this->fechaNacimiento = $fechaNacimientoU;
         $this->genero = $generoU;
         $this->ciudad = $ciudadU;
-        $this->pais = $paisU; 
+        $this->pais = $paisU;
+        $this->connect = new Conexion(); 
     }
 
     public function registro()
     {
         $Sql="insert into usuarios (genero, userName, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email) values 
-        ('".$this->getUsrID()."','".$this->getUsrNombre()."','".$this->getUsrApellido()."', '".$this->getUsrNickName()."', '".$this->getUsrEmail()."','".$this->getUsrGenero()."','".$this->getUsrFechaNacimiento()."', '".$this->getUsrContrasena()."');";
+        ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
         if(!$this->verificarLlavePrimaria())
         {
             $info=pg_query($this->conect->getRuta(),$Sql);
@@ -46,14 +49,14 @@ class Usuario
     
     public function verificarLlavePrimaria()
     {
-        $Sql="select usr_id from usuario where usr_id = '".$this->getUsrID()."' ";
-        $info=pg_query($this->conect->getRuta(),$Sql);
+        $Sql="select cedula from usuarios where cedula = '".$this->cedula."' ";
+        $info=pg_query($this->connect->getRuta(),$Sql);
         if($info)
         {
             while($row = pg_fetch_array($info))
             {
-                $id = $row['usr_id'];
-                if($id==$this->getUsrID())
+                $id = $row['cedula'];
+                if($id==$this->cedula)
                 {
                     return true;
                 }
