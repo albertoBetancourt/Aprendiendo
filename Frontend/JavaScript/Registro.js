@@ -68,6 +68,6 @@ function verificarDatos()
 			function()
 			{
 				alert("El servidor dice: "+respuesta);
-				location ("../HTML/Login.html");
+				location.href = "../HTML/Login.html";
 			});
 }
