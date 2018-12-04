@@ -6,54 +6,57 @@
 		<meta http-equiv="x-ua-compatible" content="ie-edge">
 		<meta name="author" content="Jefferson Iles Arcos">
 		<link rel="stylesheet" href="../Includes/Bootstrap4/CSS/bootstrap-grid.min.css">
-		<link rel="stylesheet" href="../CSS/Login.css">
+		<link rel="stylesheet" href="../CSS/Generales.css">
+		<link rel="stylesheet" href="../CSS/Registro.css">
 		<link rel="shortcut icon" href="../Imagenes/favicon.ico">
 		<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
 		<script src="../JavaScript/Login.js"></script>
+		<script src="../JavaScript/Vista.js"></script>
 		<title>Hotel | Iniciar sesión</title>
 	</head>
-	<body class="Contenedor">
+	<body id="body">
 
-		<nav class="row align-items-center justify-content-end Contenedor MenuAzul">
-			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzul" href="Registro.html">Registrarse</a>
-			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzulActivo" href="Login.html">Iniciar sesión</a>
-		</nav>
-		
-		<header class="row align-items-center justify-content-center Contenedor Encabezado">
-			<a class="col-10 col-sm-8 col-md-3 LinkImagen" href="index.html">
-				<img width="100%" src="../Imagenes/Logo.png" alt="Logo" title="Logo">
-			</a>
-			<h1 class="d-none d-sm-block col-sm-11 col-md-8 col-xl-8 Titulo">HOTEL PARAISO</h1>
+		<header class="Encabezado" id="header">
+			<nav class="row align-items-center justify-content-between">
+				<a class="col-4 col-sm-3 col-md-2 col-lg-1" href="index.html">
+					<img class="Logo" src="../Imagenes/Logo.png" alt="Inicio" title="Inicio">
+				</a>
+				<input class="d-sm-none col-1" type="image" src="../Imagenes/Menu.jpg" alt="Menú" id="botonMenu">
+				<div class="d-none d-sm-block col-12 col-sm-7 col-md-5 col-lg-3 ContenedorHeader" id="menuDinamico">
+					<a class="col-5 Boton BotonHeader" href="Registro.html">Registrarse</a>
+					<a class="col-6 Boton BotonHeader" href="Login.html">Iniciar sesión</a>
+				</div>
+			</nav>
 		</header>
 
-		<nav class="row align-items-center justify-content-between Contenedor Menu MenuBlanco">
-			<input type="image" src="../Imagenes/Menu.png" class="col-1 d-sm-none BotonMenu">
-			<img class="col-5 col-sm-2 order-sm-last Categoria" src="../Imagenes/4.png" alt="Categoria" title="Categoria">
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="index.html">Inicio</a>
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="Habitaciones.html">Habitaciones</a>
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="Comunidad.html">Comunidad</a>
-		</nav>
-
-		<section class="Contenedor">
-			<div class="row align-items-center justify-content-around">
-				<h2 class="col-10">Iniciar sesión</h2>
+		<section>
+			<div class="ContenedorSection">
+				<div class="row align-items-center justify-content-between">
+					<h2 class="col-10">Iniciar sesión</h2>
+				</div>
+				<form method="POST">
+					<div class="row align-items-center justify-content-around">
+						<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="usuario" placeholder="Usuario">
+					</div>
+					<div class="row align-items-center justify-content-around">
+						<input class="col-10 col-sm-8 col-md-5" type="password" name="datos" id="contrasenia" placeholder="Contraseña">
+					</div>
+					<div class="row align-items-center justify-content-around">
+						<input class="col-6 col-sm-4 col-md-2 Boton BotonSection" id="ingresar" type="button" value="Ingresar">
+					</div>
+				</form>
+				<div class="row align-items-center justify-content-center">
+					<label>¿Aún no tienes una cuenta?</label>
+					<a class="col-4 col-md-2 Boton BotonSection" href="Registro.html">Regístrate</a>
+				</div>	
 			</div>
-			<form method="POST">
-				<div class="row align-items-center justify-content-around">
-					<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="usuario" placeholder="Usuario">
-				</div>
-				<div class="row align-items-center justify-content-around">
-					<input class="col-10 col-sm-8 col-md-5" type="password" name="datos" id="contrasenia" placeholder="Contraseña">
-				</div>
-				<div class="row align-items-center justify-content-around">
-					<input class="col-6 col-sm-4 col-md-2 Boton BotonAzul" id="ingresar" type="button" value="Ingresar">
-				</div>
+			
 		</section>
 
-		<footer class="col-12">
-			<p class="row align-items-center justify-content-center">Vía Ricaurte - Agua de Dios, Km 2</p>
-			<p class="row align-items-center justify-content-center">Cel: 3229247604 - 3112420714</p>
-			<p class="row align-items-center justify-content-center">País de las Maravillas</p>
+		<footer>
+			<p>Vía Ricaurte - Agua de Dios, Km 2</p>
+			<p>Cel: 3229247604 - 3112420714</p>
+			<p>País de las Maravillas</p>
 		</footer>
 
 	</body>
