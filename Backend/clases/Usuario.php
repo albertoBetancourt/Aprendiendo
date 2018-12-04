@@ -16,8 +16,12 @@ class Usuario
 
     private $connect; //Para hacer la conexion con la base de datos
 
+    public function __construct()
+    {
+        $this->connect = new Conexion();
+    }
     
-    
+    /** 
     public function __construct($nombresU, $apellidosU, $usernameU, $cedulaU, $emailU, $contraseniaU, $fechaNacimientoU, $generoU, $ciudadU, $paisU)
     {
         $this->nombres = $nombresU;
@@ -32,16 +36,12 @@ class Usuario
         $this->pais = $paisU;
         $this->connect = new Conexion(); 
     }
+    */
 
     public function registro()
     {
-<<<<<<< HEAD
-        $Sql="insert into usuarios (username, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email, genero) values 
-        ( '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."', '".$this->genero."');";
-=======
         $Sql="insert into usuarios (genero, username, cedula,  nombre, apellido, password, ciudad, pais, fechanacimiento, email) values 
         ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
->>>>>>> 4ed11a45e21212574ca74a37dd71585651cea056
         if(!$this->verificarLlavePrimaria())
         {
             $info=pg_query($this->connect->getRuta(),$Sql);
@@ -80,7 +80,7 @@ class Usuario
             return json_encode("Error");
         else
         {
-            while ($row = pg_fetch_array($info)) 
+            while ($row = pg_fetch_array($info))
             {
                 $contrasenaReal = $row['password'];
                 if($contrasenaReal == $contrasenaRecibida)
