@@ -103,17 +103,17 @@
             {
                 while ($row = pg_fetch_array($info))
                 {
-                    $usernameReal = $row['username'];
-                    $nombreReal = $row['nombre'];
-                    $apellidoReal = $row['apellido'];
-                    $ciudadReal = $row['ciudad'];
-                    $paisReal = $row['pais'];
-                    $fechaNacimientoReal = $row['fechanacimiento'];
-                    $emailReal = $row['email'];
-                    $generoReal = $row['genero'];
-                    $cedulaReal = $row['cedula'];
+                    $usernameReal = "Username: ".$row['username'];
+                    $nombreReal = "Nombre: ".$row['nombre'];
+                    $apellidoReal = "Apellido: ".$row['apellido'];
+                    $ciudadReal = "Ciudad: ".$row['ciudad'];
+                    $paisReal = "Pais: ".$row['pais'];
+                    $fechaNacimientoReal = "Fecha de nacimiento: ".$row['fechanacimiento'];
+                    $emailReal = "Correo electrónico: ".$row['email'];
+                    $generoReal = "Género: ".$row['genero'];
+                    $cedulaReal = "Cédula: ".$row['cedula'];
 
-                    $datosUsuario = array($username, $nombreReal, $apellidoReal, $cedulaReal, $generoReal, $fechaNacimientoReal, $emailReal, $ciudadReal, $paisReal);
+                    $datosUsuario = array($usernameReal, $nombreReal, $apellidoReal, $cedulaReal, $generoReal, $fechaNacimientoReal, $emailReal, $ciudadReal, $paisReal);
                     return json_encode($datosUsuario);
                 }
             }
