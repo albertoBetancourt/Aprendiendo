@@ -1,8 +1,7 @@
 
 body
 {
-	background-image: url(../Imagenes/Background.jpg);
-	background-repeat: no-repeat;
+	background: url(../Imagenes/Background.jpg) no-repeat 100% 100%;
 }
 
 .Contenedor
