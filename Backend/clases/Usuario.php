@@ -1,5 +1,5 @@
 <?php
-include_once(Conexion);
+include_once("Conexion.php");
 class Usuario
 {
     private $nombres;
@@ -39,7 +39,7 @@ class Usuario
         ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
         if(!$this->verificarLlavePrimaria())
         {
-            $info=pg_query($this->conect->getRuta(),$Sql);
+            $info=pg_query($this->connect->getRuta(),$Sql);
             return true;
         }
         else {
