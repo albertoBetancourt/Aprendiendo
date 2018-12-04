@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="../Includes/Bootstrap4/CSS/bootstrap-grid.min.css">
 		<link rel="stylesheet" href="../CSS/Login.css">
 		<link rel="shortcut icon" href="../Imagenes/favicon.ico">
+		<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
+		<script src="../JavaScript/Login.js"></script>
 		<title>Hotel | Iniciar sesión</title>
 	</head>
 	<body class="Contenedor">
@@ -32,8 +34,20 @@
 			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="Comunidad.html">Comunidad</a>
 		</nav>
 
-		<section class="row align-items-start justify-content-around Contenedor">
-			
+		<section class="Contenedor">
+			<div class="row align-items-center justify-content-around">
+				<h2 class="col-10">Iniciar sesión</h2>
+			</div>
+			<form method="POST">
+				<div class="row align-items-center justify-content-around">
+					<input class="col-10 col-sm-8 col-md-5" type="text" name="datos" id="usuario" placeholder="Usuario">
+				</div>
+				<div class="row align-items-center justify-content-around">
+					<input class="col-10 col-sm-8 col-md-5" type="password" name="datos" id="contrasenia" placeholder="Contraseña">
+				</div>
+				<div class="row align-items-center justify-content-around">
+					<input class="col-6 col-sm-4 col-md-2 Boton BotonAzul" id="ingresar" type="button" value="Ingresar">
+				</div>
 		</section>
 
 		<footer class="col-12">
@@ -41,9 +55,6 @@
 			<p class="row align-items-center justify-content-center">Cel: 3229247604 - 3112420714</p>
 			<p class="row align-items-center justify-content-center">País de las Maravillas</p>
 		</footer>
-		
-		<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
-		<script src="../JavaScript/ScriptVista.js"></script>
 
 	</body>
 </html>
