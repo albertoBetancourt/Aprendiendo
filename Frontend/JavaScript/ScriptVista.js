@@ -21,6 +21,7 @@ function verificarDatos()
 	var cedula = document.getElementById ("cedula").value;
 	var contrasenia = document.getElementById("contrasenia").value;
 	var confirmacion = document.getElementById("confirmacion").value;
+	var fechaNaciminento = document.getElementById("fechaNacimiento").value;
 	var hombre = document.getElementById("hombre");
 	var mujer = document.getElementById ("mujer");
 	var genero;
@@ -50,9 +51,25 @@ function verificarDatos()
 			return;
 		}
 	}
-	alert ("Datos correctos");
+
+	alert (datos[10].value);
 	/**
 	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
 	 */
-	$.post("../../Backend/Registro.php/", {nombre:})
+	$.post("../../Backend/Registro.php/", 
+			{nombres:datos[0].value,
+			apellidos:datos[1].value,
+			username:datos[2].value,
+			cedula:cedula,
+			email:datos[4],
+			contrasenia:contrasenia,
+			fechaNaciminento:fechaNaciminento,
+			genero:genero,
+			ciudad:datos[10].value,
+			pais:datos[11].value},
+			function(respuesta)
+			{
+				alert("El servidor dice: "+respuesta);
+				location ("Login.html");
+			})
 }
