@@ -35,7 +35,7 @@ class Usuario
 
     public function registro()
     {
-        $Sql="insert into usuarios (genero, userName, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email) values 
+        $Sql="insert into usuarios (genero, username, cedula,  nombre, apellido, password, ciudad, pais, fechanacimiento, email) values 
         ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
         if(!$this->verificarLlavePrimaria())
         {
