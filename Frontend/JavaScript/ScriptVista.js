@@ -51,8 +51,6 @@ function verificarDatos()
 			return;
 		}
 	}
-
-	alert (datos[10].value);
 	/**
 	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
 	 */
