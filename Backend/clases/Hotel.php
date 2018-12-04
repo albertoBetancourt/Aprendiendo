@@ -54,6 +54,7 @@
                     }
                 }
             }
+            pg_close();
         }
         public function registro($usuario)
         {
@@ -67,6 +68,7 @@
             else {
                 return false;
             }
+            pg_close();
         }
         
         public function verificarLlavePrimaria($usuario)
@@ -87,6 +89,7 @@
                     }
                 }
             }
+            pg_close();
         }
     }
 
