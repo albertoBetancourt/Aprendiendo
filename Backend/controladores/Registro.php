@@ -44,7 +44,8 @@
 			}
 		}
 	}
+
 	$datos = $_REQUEST;
-	$Obj=new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'], $datos['ciudad'], $datos['pais'] );
-	$Obj->registro();
+	$nuevoRegistro = new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'], $datos['ciudad'], $datos['pais'] );
+	$nuevoRegistro->registro();
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once("Conexion.php");
+include("Conexion.php");
 class Usuario
 {
     private $nombres;
@@ -79,6 +79,11 @@ class Usuario
     public function getPais()
     {
         return $this->pais;
+    }
+
+    public function getConnect()
+    {
+        return $this->connect;
     }
 }
 ?>
