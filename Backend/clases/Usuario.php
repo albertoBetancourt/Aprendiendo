@@ -32,7 +32,6 @@ class Usuario
         $this->connect = new Conexion(); 
     }
 
-
     public function getNombres()
     {
         return $this->nombres;
