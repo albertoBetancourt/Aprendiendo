@@ -67,7 +67,7 @@ function verificarDatos()
 			pais:datos[11].value},
 			function()
 			{
-				alert("El servidor dice: Hola");
-				location ("Login.html");
+				alert("El servidor dice: "+respuesta);
+				location ("../HTML/Login.html");
 			});
 }
