@@ -1,5 +1,5 @@
 <?php
-	include_once("../Models/Usuario.php");
+	include_once("../clases/Usuario.php");
 	class Registro
 	{
 		private $nombres;

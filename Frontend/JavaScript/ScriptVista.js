@@ -54,14 +54,14 @@ function verificarDatos()
 	/**
 	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
 	 */
-	$.post("../../Backend/Registro.php/", 
+	$.post("../../Backend/controladores/Registro.php", 
 			{nombres:datos[0].value,
 			apellidos:datos[1].value,
 			username:datos[2].value,
-			cedula:cedula,
-			email:datos[4],
-			contrasenia:contrasenia,
-			fechaNaciminento:fechaNaciminento,
+			cedula:datos[3].value,
+			email:datos[4].value,
+			contrasenia:datos[5].value,
+			fechaNacimiento:datos[7].value,
 			genero:genero,
 			ciudad:datos[10].value,
 			pais:datos[11].value},
@@ -69,5 +69,5 @@ function verificarDatos()
 			{
 				alert("El servidor dice: "+respuesta);
 				location ("Login.html");
-			})
+			});
 }
