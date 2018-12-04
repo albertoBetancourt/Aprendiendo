@@ -90,6 +90,34 @@
                 }
             }
         }
+
+        public function consultarPerfil($usuario)
+        {
+            $sql = "select * from usuarios where username = '".$usuario->getUsername()."' ";
+            $info = pg_query($this->connect->getRuta(), $sql);
+            if(!$info)
+            {
+                return json_encode("Error");
+            }
+            else
+            {
+                while ($row = pg_fetch_array($info))
+                {
+                    $usernameReal = $row['username'];
+                    $nombreReal = $row['nombre'];
+                    $apellidoReal = $row['apellido'];
+                    $ciudadReal = $row['ciudad'];
+                    $paisReal = $row['pais'];
+                    $fechaNacimientoReal = $row['fechanacimiento'];
+                    $emailReal = $row['email'];
+                    $generoReal = $row['genero'];
+                    $cedulaReal = $row['cedula'];
+
+                    $datosUsuario = array($username, $nombreReal, $apellidoReal, $cedulaReal, $generoReal, $fechaNacimientoReal, $emailReal, $ciudadReal, $paisReal);
+                    return json_encode($datosUsuario);
+                }
+            }
+        }
         
     }
 
