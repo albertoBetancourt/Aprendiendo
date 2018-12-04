@@ -35,8 +35,13 @@ class Usuario
 
     public function registro()
     {
+<<<<<<< HEAD
         $Sql="insert into usuarios (username, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email, genero) values 
         ( '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."', '".$this->genero."');";
+=======
+        $Sql="insert into usuarios (genero, username, cedula,  nombre, apellido, password, ciudad, pais, fechanacimiento, email) values 
+        ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
+>>>>>>> 4ed11a45e21212574ca74a37dd71585651cea056
         if(!$this->verificarLlavePrimaria())
         {
             $info=pg_query($this->connect->getRuta(),$Sql);
@@ -61,6 +66,34 @@ class Usuario
                     return true;
                 }
                 else{
+                    return false;
+                }
+            }
+        }
+    }
+
+    public function verificarContrasena($nombreUsuario, $contrasenaRecibida)
+    {
+        $Sql="select * from usuarios where username = '".$nombreUsuario."' ";
+        $info=pg_query($this->connect->getRuta(),$Sql);
+        if(!$info)
+            return json_encode("Error");
+        else
+        {
+            while ($row = pg_fetch_array($info)) 
+            {
+                $contrasenaReal = $row['password'];
+                if($contrasenaReal == $contrasenaRecibida)
+                {
+                    session_start();
+                    $_SESSION["usuarios"]["nombre"] = $row["nombre"];
+                    $_SESSION["usuarios"]["cedula"]= $row["cedula"];
+                    $_SESSION["usuarios"]["email"] = $row["email"];
+                    $_SESSION["usuarios"]["creado"] = true;
+                    return true;
+                }
+                else
+                {
                     return false;
                 }
             }
