@@ -3,8 +3,8 @@ window.addEventListener("load", load, false);
 
 function load()
 {
-	var botonEnviar = document.getElementById ("ingresar");
-	botonEnviar.addEventListener ("click", verificarDatos, false);
+	var botonIngresar = document.getElementById ("ingresar");
+	botonIngresar.addEventListener ("click", verificarDatos, false);
 }
 
 function verificarDatos ()
