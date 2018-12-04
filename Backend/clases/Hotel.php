@@ -15,7 +15,7 @@
 
         private $connect; //Para hacer la conexion con la base de datos.
     
-        public function __contruct()
+        public function __construct()
         {
             $this->nombre = "Hotel Paraiso";
             $this->categoria = "../Imagenes/Logo.png";
@@ -28,10 +28,9 @@
             $this->connect = new Conexion();
         }
 
-        public function verificarContrasena($nombreUsuario, $contrasenaRecibida)
+        public function validarUsuario($username,$contrasenia)
         {
-            $Sql="select * from usuarios where username = '".$nombreUsuario."' ";
-            $this->connect->conectar();
+            $Sql="select * from usuarios where username = '".$username."' ";
             $info=pg_query($this->connect->getRuta(),$Sql);
             if(!$info)
                 return json_encode("Error");
@@ -40,7 +39,7 @@
                 while ($row = pg_fetch_array($info))
                 {
                     $contrasenaReal = $row['password'];
-                    if($contrasenaReal == $contrasenaRecibida)
+                    if($contrasenaReal == $contrasenia)
                     {
                         session_start();
                         $_SESSION["usuarios"]["nombre"] = $row["nombre"];
@@ -55,27 +54,27 @@
                     }
                 }
             }
-            pg_close();
         }
-        public function registro($usuario)
+
+        public function registrarUsuario(Usuario $usuario)
         {
             $Sql="insert into usuarios (genero, username, cedula,  nombre, apellido, password, ciudad, pais, fechanacimiento, email) values 
-            ('".$usuario->getGenero()."', '".$usuario->getUsername()."', '".$usuario->getCedula()."', '".$usuario->getNombres()."', '".$usuario->getApellidos()."', '".$usuario->getContrasenia()."', '".$usuario->getCiudad()."', '".$usuario->getPais()."', '".$usuario->getFechaNacimiento()."', '".$usuario->getEmail()."');";
+            ('".$usuario->getGenero()."', '".$usuario->getUsername()."', '".$usuario->getCedula()."', '".$usuario->getNombres()."', '".$usuario->getApellidos()."',
+             '".$usuario->getContrasenia()."', '".$usuario->getCiudad()."', '".$usuario->getPais()."', '".$usuario->getFechaNacimiento()."', '".$usuario->getEmail()."');";
             if(!$this->verificarLlavePrimaria($usuario))
             {
-                $info=pg_query($usuario->getConnect()->getRuta(),$Sql);
+                $info=pg_query($this->connect->getRuta(),$Sql);
                 return true;
             }
             else {
                 return false;
             }
-            pg_close($usuario->getConnect()->getRuta());
         }
-        
-        public function verificarLlavePrimaria($usuario)
+
+        public function verificarLlavePrimaria(Usuario $usuario)
         {
             $Sql="select cedula from usuarios where cedula = '".$usuario->getCedula()."' ";
-            $info=pg_query($usuario->getConnect()->getRuta(),$Sql);
+            $info=pg_query($this->connect->getRuta(),$Sql);
             if($info)
             {
                 while($row = pg_fetch_array($info))
@@ -91,6 +90,7 @@
                 }
             }
         }
+        
     }
 
 ?>
