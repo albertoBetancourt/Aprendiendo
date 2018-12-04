@@ -1,5 +1,4 @@
 <?php
-	include_once("../clases/Usuario.php");
 	include_once("../clases/Hotel.php");
 	class Registro
 	{
@@ -29,9 +28,10 @@
 		}
 		public function registro()
 		{
-			$usuario= new Usuario($this->nombres,$this->apellidos,$this->username,$this->cedula,$this->email,$this->contrasenia,$this->fechaNacimiento,$this->genero,$this->ciudad,$this->pais);
 			$hotel = new Hotel();
-			$respuesta = $hotel->registro($usuario);
+			$usuario= new Usuario($this->nombres,$this->apellidos,$this->username,$this->cedula,$this->email,$this->contrasenia,$this->fechaNacimiento,$this->genero,$this->ciudad,$this->pais);
+			
+			$respuesta = $hotel->registrarUsuario($usuario);
 			if($respuesta)
 			{
 				//$_SESSION["usuario"] = $respuesta;
@@ -44,8 +44,7 @@
 			}
 		}
 	}
-
 	$datos = $_REQUEST;
-	$nuevoRegistro = new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'], $datos['ciudad'], $datos['pais'] );
-	$nuevoRegistro->registro();
+	$Obj=new Registro($datos['nombres'],$datos['apellidos'], $datos['username'], $datos['cedula'], $datos['email'], $datos['contrasenia'], $datos['fechaNacimiento'], $datos['genero'], $datos['ciudad'], $datos['pais'] );
+	$Obj->registro();
 ?>
