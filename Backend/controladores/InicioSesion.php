@@ -1,5 +1,5 @@
 <?php
-    include_once("../clases/Usuario.php");
+    include_once("../clases/Hotel.php");
 
     class InicioSesion
     {

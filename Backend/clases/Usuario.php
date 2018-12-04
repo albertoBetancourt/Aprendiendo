@@ -30,6 +30,55 @@ class Usuario
         $this->pais = $paisU;
         $this->connect = new Conexion(); 
     }
+
+    public function getNombres()
+    {
+        return $this->nombres;
+    }
+
+    public function getApellidos()
+    {
+        return $this->apellidos;
+    }
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    public function getCedula()
+    {
+        return $this->cedula;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function getContrasenia()
+    {
+        return $this->contrasenia;
+    }
+
+    public function getFechaNacimiento()
+    {
+        return $this->fechaNacimiento;
+    }
     
+    public function getGenero()
+    {
+        return $this->genero;
+    }
+
+    public function getCiudad()
+    {
+        return $this->ciudad;
+    }
+
+    public function getPais()
+    {
+        return $this->pais;
+    }
 }
 ?>
