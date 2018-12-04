@@ -14,8 +14,8 @@
         
         public function iniciarSesion()
         {
-            $usuario = new Usuario();
-            $respuesta = $usuario->verificarContrasena($this->username, $this->contrasena);
+            $hotel = new Hotel();
+            $respuesta = $hotel->verificarContrasena($this->username, $this->contrasena);
             if($respuesta)
 			{
 				echo $_SESSION["usuarios"]["nombre"];
