@@ -1,10 +1,10 @@
 <?php
     session_start();
-    $varsession= $_SESSION['usuarios']['nombre'];
-    
-    if($varsession == null || $varsession = '')
+    $varsession= $_SESSION['usuarios']['creado'];
+
+    if($varsession == null || $varsession = '' || $varsession=false)
     {
-        echo 'inicia sesión primero';
+        echo 'inicia sesion primero';
         die();
     }
 
