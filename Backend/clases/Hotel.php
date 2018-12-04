@@ -31,6 +31,7 @@
         public function verificarContrasena($nombreUsuario, $contrasenaRecibida)
         {
             $Sql="select * from usuarios where username = '".$nombreUsuario."' ";
+            $this->connect->conectar();
             $info=pg_query($this->connect->getRuta(),$Sql);
             if(!$info)
                 return json_encode("Error");
