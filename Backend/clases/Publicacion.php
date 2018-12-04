@@ -1,14 +1,16 @@
 <?php
     class Publicacion
 	{
-		private $ftoID;
-		private $ftoNombre;
-        private $ftoRuta;
-        private $ftoDescripcion;
+		private $id;
+		private $nombre;
+        private $ruta;
+        private $descripcion;
 
-        public function __construct( )
+        public function __construct($nombreR, $rutaR, $descripcionR)
         {
-
+            $this->nombre = $nombreR;
+            $this->ruta = $rutaR;
+            $this->descripcion = $descripcionR;
         }
     }
 

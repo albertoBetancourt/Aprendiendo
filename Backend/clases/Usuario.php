@@ -16,12 +16,6 @@ class Usuario
 
     private $connect; //Para hacer la conexion con la base de datos
 
-    public function __construct()
-    {
-        $this->connect = new Conexion();
-    }
-    
-    /** 
     public function __construct($nombresU, $apellidosU, $usernameU, $cedulaU, $emailU, $contraseniaU, $fechaNacimientoU, $generoU, $ciudadU, $paisU)
     {
         $this->nombres = $nombresU;
@@ -36,7 +30,7 @@ class Usuario
         $this->pais = $paisU;
         $this->connect = new Conexion(); 
     }
-    */
+
 
     public function registro()
     {
