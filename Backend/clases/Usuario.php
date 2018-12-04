@@ -35,8 +35,8 @@ class Usuario
 
     public function registro()
     {
-        $Sql="insert into usuarios (genero, userName, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email) values 
-        ('".$this->genero."', '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."');";
+        $Sql="insert into usuarios (username, cedula,  nombre, apellido, password, ciudad, pais, fechaNacimiento, email, genero) values 
+        ( '".$this->username."', '".$this->cedula."', '".$this->nombres."', '".$this->apellidos."', '".$this->contrasenia."', '".$this->ciudad."', '".$this->pais."', '".$this->fechaNacimiento."', '".$this->email."', '".$this->genero."');";
         if(!$this->verificarLlavePrimaria())
         {
             $info=pg_query($this->connect->getRuta(),$Sql);
