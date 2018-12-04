@@ -51,10 +51,11 @@ function verificarDatos()
 			return;
 		}
 	}
+	alert (datos[7].value);
 	/**
 	 * Se le envian los datos a la clase registro, que se encargará de las validaciones que requieren al servidor.
 	 */
-	$.post("../../Backend/Registro.php/", 
+	$.post("../../Backend/controladores/Registro.php", 
 			{nombres:datos[0].value,
 			apellidos:datos[1].value,
 			username:datos[2].value,
@@ -65,9 +66,9 @@ function verificarDatos()
 			genero:genero,
 			ciudad:datos[10].value,
 			pais:datos[11].value},
-			function(respuesta)
+			function()
 			{
-				alert("El servidor dice: "+respuesta);
+				alert("El servidor dice: Hola");
 				location ("Login.html");
-			})
+			});
 }
