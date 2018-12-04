@@ -68,6 +68,6 @@ function verificarDatos()
 			function(respuesta)
 			{
 				alert("El servidor dice: "+respuesta);
-				location ("Login.html");
+				location ("../HTML/Login.html");
 			});
 }
