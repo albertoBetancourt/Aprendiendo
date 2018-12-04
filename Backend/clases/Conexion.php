@@ -18,6 +18,11 @@
 
 			if(!$this->Ruta)
 				echo json_encode("Error");	
-		}	
+		}
+
+		public function cerrarConexion()
+		{
+			pg_close($this->ruta);
+		}
 	}
 ?>
