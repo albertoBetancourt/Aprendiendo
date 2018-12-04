@@ -68,7 +68,7 @@
             else {
                 return false;
             }
-            pg_close();
+            pg_close($usuario->getConnect()->getRuta());
         }
         
         public function verificarLlavePrimaria($usuario)
@@ -89,7 +89,6 @@
                     }
                 }
             }
-            pg_close();
         }
     }
 
