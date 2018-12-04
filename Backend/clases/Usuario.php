@@ -66,5 +66,33 @@ class Usuario
             }
         }
     }
+
+    public function verificarContrasena($nombreUsuario, $contrasenaRecibida)
+    {
+        $Sql="select * from usuarios where username = '".$nombreUsuario."' ";
+        $info=pg_query($this->connect->getRuta(),$Sql);
+        if(!$info)
+            return json_encode("Error");
+        else
+        {
+            while ($row = pg_fetch_array($info)) 
+            {
+                $contrasenaReal = $row['password'];
+                if($contrasenaReal == $contrasenaRecibida)
+                {
+                    session_start();
+                    $_SESSION["usuarios"]["nombre"] = $row["nombre"];
+                    $_SESSION["usuarios"]["cedula"]= $row["cedula"];
+                    $_SESSION["usuarios"]["email"] = $row["email"];
+                    $_SESSION["usuarios"]["creado"] = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+    }
 }
 ?>

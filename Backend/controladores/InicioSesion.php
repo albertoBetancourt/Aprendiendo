@@ -15,6 +15,11 @@
         public function iniciarSesion()
         {
             $usuario = new Usuario();
+            $usuario->verificarContrasena($this->username, $this->contrasena);
         }
+
+        $datos = $_REQUEST;
+        $login = new InicioSesion($datos['username'],$datos['contrasena']);
+        $login->iniciarSesion();
     }
 ?>
