@@ -15,7 +15,15 @@
         public function iniciarSesion()
         {
             $usuario = new Usuario();
-            $usuario->verificarContrasena($this->username, $this->contrasena);
+            $respuesta = $usuario->verificarContrasena($this->username, $this->contrasena);
+            if($respuesta)
+			{
+				echo $_SESSION["usuario"]["nombre"];
+			}
+			else
+			{
+				echo "Usuario o contraseña incorrecta";
+			}
         }
 
         $datos = $_REQUEST;
