@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $varsession= $_SESSION['usuarios']['creado'];
+    $varsession= $_SESSION['usuario'];
 
     if($varsession == null || $varsession = '' || $varsession==false)
     {
@@ -8,7 +8,7 @@
         die();
     }
     else{
-        location.href = "../HTML/Comunidad.html";
+        location("../HTML/Comunidad.html");
     }
 
 ?>
