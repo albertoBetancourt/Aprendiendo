@@ -5,7 +5,10 @@ class Publicaciones
     private $titulo;
     private $lugar;
     private $id;
-    
+    private $extension;
+    private $nombre;
+    private $ruta;
+
     public function __construct($url, $titulo, $lugar)
     {
         $this->url = $url;
