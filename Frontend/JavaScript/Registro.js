@@ -65,7 +65,7 @@ function verificarDatos()
 			genero:genero,
 			ciudad:datos[10].value,
 			pais:datos[11].value},
-			function()
+			function(respuesta)
 			{
 				alert("El servidor dice: "+respuesta);
 				location.href = "../HTML/Login.html";

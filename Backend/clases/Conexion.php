@@ -5,19 +5,19 @@
 
 		function __construct()
 		{
-		$this->Conectar();	
+			$this->Conectar();	
 		}
 		public function getRuta()
 		{
-		return($this->Ruta);	
+			return($this->Ruta);	
 		}
 
 		function Conectar()
 		{
-		$this->Ruta=pg_connect("dbname=HotelParaiso user=AdminHotel password=hotelparaiso");
+			$this->Ruta=pg_connect("dbname=HotelParaiso user=AdminHotel password=hotelparaiso");
 
-		if(!$this->Ruta)
-		echo json_encode("Error");	
+			if(!$this->Ruta)
+				echo json_encode("Error");	
 		}	
 	}
 ?>

@@ -1,7 +1,7 @@
+
 body
 {
 	margin: 0;
-	padding: 20vw 0 0 0;
 }
 
 .Contenedor
@@ -21,6 +21,7 @@ input
 	cursor: pointer;
 	border: 0;
 	margin: 0;
+	padding: 3px 0;
 	text-align: center;
 	text-decoration: none;
 	transition: 500ms all linear; /*Le da un efecto de transición al botón*/
@@ -36,7 +37,7 @@ input
 	top: 0;
 	position: fixed;
 	background-color: #0c5991;
-	padding: 1vw;
+	padding: 1vw 2vw 1vw 2vw;
 }
 
 .Logo
@@ -44,6 +45,58 @@ input
 	width: 100%;
 }
 
+.ContenedorHeader
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+.BotonHeader
+{
+	color: black;
+	font-weight: bold;
+
+}
+
+.BotonHeader:hover
+{
+	background-color: rgba(255, 255, 255, 0.5) 
+}
+
 /*-----------------------------------------------------------------------------------------------*/
 
 
+/*-------------------------------------- Contenido ----------------------------------------------*/
+
+section
+{
+	background-image: url("../Imagenes/Background.jpg");
+	background-size: cover;
+	padding: 5vw 10vw 5vw 10vw;
+}
+
+.ContenedorSection
+{
+	background: rgba(255, 255, 255, 0.8);
+	padding: 3vw;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*----------------------------------- Créditos --------------------------------------------------*/
+
+footer
+{
+	background-color: #0c5991;
+	padding: 1vw;
+}
+
+footer p
+{
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------*/

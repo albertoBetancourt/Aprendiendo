@@ -1,0 +1,11 @@
+.Fachada
+{
+	width: 100%;
+	border: 5px solid #0c5991;
+	border-radius: 15px;
+}
+
+section p
+{
+    margin-top: 0;
+}

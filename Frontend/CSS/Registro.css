@@ -1,0 +1,19 @@
+form input
+{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 0 5px;
+}
+
+.BotonSection
+{
+    background-color: black;
+    color: white;
+    margin: 5px; 
+}
+
+.BotonSection:hover
+{
+    background-color: rgba(0, 0, 0, 0.8)
+}

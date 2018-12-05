@@ -6,44 +6,42 @@
 		<meta http-equiv="x-ua-compatible" content="ie-edge">
 		<meta name="author" content="Jefferson Iles Arcos">
 		<link rel="stylesheet" href="../Includes/Bootstrap4/CSS/bootstrap-grid.min.css">
+		<link rel="stylesheet" href="../CSS/Generales.css">
 		<link rel="stylesheet" href="../CSS/Comunidad.css">
 		<link rel="shortcut icon" href="../Imagenes/favicon.ico">
+		<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
+		<script src="../JavaScript/Vista.js"></script>
 		<title>Hotel | Comunidad</title>
 	</head>
-	<body class="Contenedor">
 
-		<nav class="row align-items-center justify-content-end Contenedor MenuAzul">
-			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzul" href="Registro.html">Registrarse</a>
-			<a class="col-5 col-sm-4 col-md-3 col-lg-2 Boton BotonAzul" href="Login.html">Iniciar sesión</a>
-		</nav>
-		
-		<header class="row align-items-center justify-content-center Contenedor Encabezado">
-			<a class="col-10 col-sm-8 col-md-3 LinkImagen" href="index.html">
-				<img width="100%" src="../Imagenes/Logo.png" alt="Logo" title="Logo">
-			</a>
-			<h1 class="d-none d-sm-block col-sm-11 col-md-8 col-xl-8 Titulo">HOTEL PARAISO</h1>
+	<body id="body">
+
+		<header class="Encabezado" id="header">
+			<nav class="row align-items-center justify-content-between">
+				<a class="col-4 col-sm-3 col-md-2 col-lg-1" href="index.html">
+					<img class="Logo" src="../Imagenes/Logo.png" alt="Inicio" title="Inicio">
+				</a>
+				<input class="d-sm-none col-1" type="image" src="../Imagenes/Menu.jpg" alt="Menú" id="botonMenu">
+				<div class="d-none d-sm-block col-12 col-sm-10 col-md-8 col-lg-6 ContenedorHeader" id="menuDinamico">
+					<a class="col-4 Boton BotonHeader" href="Comunidad.html">Publicaciones</a>
+					<a class="col-3 Boton BotonHeader" href="Habitaciones.html">Reservar</a>
+					<a class="col-4 Boton BotonHeader" href="Perfil.html">Mi perfil</a>
+				</div>
+			</nav>
 		</header>
 
-		<nav class="row align-items-center justify-content-between Contenedor Menu MenuBlanco">
-			<input type="image" src="../Imagenes/Menu.png" class="col-1 d-sm-none BotonMenu">
-			<img class="col-5 col-sm-2 order-sm-last Categoria" src="../Imagenes/4.png" alt="Categoria" title="Categoria">
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="index.html">Inicio</a>
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlanco" href="Habitaciones.html">Habitaciones</a>
-			<a class="d-none d-sm-block col-sm-3 Boton BotonBlancoActivo" href="Comunidad.html">Comunidad</a>
-		</nav>
-
-		<section class="row align-items-start justify-content-around Contenedor">
-			
+		<section>
+			<div class="ContenedorSection">
+						
+			</div>
 		</section>
 
-		<footer class="col-12">
-			<p class="row align-items-center justify-content-center">Vía Ricaurte - Agua de Dios, Km 2</p>
-			<p class="row align-items-center justify-content-center">Cel: 3229247604 - 3112420714</p>
-			<p class="row align-items-center justify-content-center">País de las Maravillas</p>
+		<footer>
+			<p>Vía Ricaurte - Agua de Dios, Km 2</p>
+			<p>Cel: 3229247604 - 3112420714</p>
+			<p>País de las Maravillas</p>
 		</footer>
-		
-		<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
-		<script src="../JavaScript/ScriptVista.js"></script>
-
+	
 	</body>
+
 </html>

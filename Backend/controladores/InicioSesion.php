@@ -1,5 +1,5 @@
 <?php
-    include_once("../clases/Usuario.php");
+    include_once("../clases/Hotel.php");
 
     class InicioSesion
     {
@@ -14,20 +14,20 @@
         
         public function iniciarSesion()
         {
-            $usuario = new Usuario();
-            $respuesta = $usuario->verificarContrasena($this->username, $this->contrasena);
+            $hotel = new Hotel();
+            $respuesta = $hotel->verificarContrasena($this->username, $this->contrasena);
             if($respuesta)
 			{
-				echo $_SESSION["usuario"]["nombre"];
+				echo $_SESSION["usuarios"]["nombre"];
 			}
 			else
 			{
 				echo "Usuario o contraseña incorrecta";
 			}
         }
-
-        $datos = $_REQUEST;
-        $login = new InicioSesion($datos['username'],$datos['contrasena']);
-        $login->iniciarSesion();
     }
+
+    $datos = $_REQUEST;
+    $login = new InicioSesion($datos['username'],$datos['contrasena']);
+    $login->iniciarSesion();
 ?>
