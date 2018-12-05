@@ -94,17 +94,25 @@
         public function consultarPerfil()
 		{
 			$usuario;
-			session_start();
+            session_start();
 			$Sql="select * from usuarios where cedula = '".$_SESSION['cedula']."'";
 			$info=pg_query($this->connect->getRuta(),$Sql);
 			if($info)
 			{
 				while($row = pg_fetch_array($info))
 				{
-					$usuario[] = array("cedula" => $row['cedula'],"nombreCompleto"=>$row['nombre']." ".$row['apellido'], "fechanacimiento"=>$row['fechanacimiento'],"username"=>$row['username'],"ciudad"=>$row['ciudad'],"pais"=>$row['pais']);
+                    $cedula = $row['cedula'];
+                    $nombre = $row['nombre'];
+                    $username = $row['username'];
+                    $fechanacimiento = $row['fechanacimiento'];
+                    $ciudad = $row['ciudad'];
+                    $pais = $row['pais'];
+
+                    $datos = array($cedula,$nombre,$username,$fechanacimiento,$ciudad,$pais);
+
 				}
             }
-			return json_encode($usuario);
+			return $datos;
 		}
         
     }
