@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	echo $_SESSION['nombre'];
+	echo $_SESSION['cedula'];
 	
 ?>
 <!DOCTYPE html>
@@ -10,11 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="../Includes/jQuery/jquery-3.3.1.js"></script>
-    <script type="text/javascript" language="javascript1.5" src="../JavaScript/ConsultarPerfil.js"></script>
+    <script src="../JavaScript/ConsultarPerfil.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <a href= "ConsultarPerfil()">ingrese</a>
     <table>
         <table class="infoTabla" id="perfil">
             <tr>

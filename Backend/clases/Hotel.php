@@ -95,8 +95,8 @@
 		{
 			$usuario;
 			session_start();
-			$Sql="select * from usuario where cedula = '".$_SESSION['cedula']."'";
-			$info=pg_query($this->conect->getRuta(),$Sql);
+			$Sql="select * from usuarios where cedula = '".$_SESSION['cedula']."'";
+			$info=pg_query($this->connect->getRuta(),$Sql);
 			if($info)
 			{
 				while($row = pg_fetch_array($info))
