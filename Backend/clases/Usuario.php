@@ -1,5 +1,5 @@
 <?php
-include_once("Conexion.php");
+
 class Usuario
 {
     private $nombres;
@@ -15,6 +15,7 @@ class Usuario
     private $fotoPerfil;
 
     private $connect; //Para hacer la conexion con la base de datos
+ 	   
     
     public function __construct($nombresU, $apellidosU, $usernameU, $cedulaU, $emailU, $contraseniaU, $fechaNacimientoU, $generoU, $ciudadU, $paisU)
     {
