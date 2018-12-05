@@ -10,9 +10,9 @@
 	<link rel="stylesheet" href="../CSS/Generales.css">
 	<link rel="stylesheet" href="../CSS/Registro.css">
 	<link rel="shortcut icon" href="../Imagenes/favicon.ico">
-	<script src="../Includes/jQuery/jquery-3.3.1.js"></script>
-	<script src="../JavaScript/Registro.js"></script>
-	<script src="../JavaScript/Vista.js"></script>
+	<script async="async" src="../Includes/jQuery/jquery-3.3.1.js"></script>
+	<script async="async" src="../JavaScript/Registro.js"></script>
+	<script async="async" src="../JavaScript/Vista.js"></script>
 	<title>Hotel | Registrarse</title>
 </head>
 
@@ -33,8 +33,10 @@
 
 		<section>
 			<div class="ContenedorSection">
-				<div class="row align-items-center justify-content-between">
-					<h2 class="col-12">Registro</h2>
+				<div class="row d-flex">
+					<h2 class="col-5"></h2>
+					<h2 class="col-4 align-items-center justify-content-between">Registro</h2>
+					<h2 class="col-3"></h2>
 				</div>
 				<form method="POST">
 					<div class="row align-items-center justify-content-between">
@@ -43,7 +45,7 @@
 					</div>
 					<div class="row align-items-center justify-content-between">
 						<input class="col-12 col-sm-8 col-md-5" type="text" name="datos" id="usuario" placeholder="Usuario">
-						<input class="col-12 col-sm-8 col-md-5" type="number" name="datos" id="cedula" placeholder="Cédula">
+						<input class="col-12 col-sm-8 col-md-5" type="number" name="datos" id="cedula" placeholder="Cédula" min="1000000000">
 					</div>
 					<div class="row align-items-center">
 						<input class="col-12 col-sm-8 col-md-5" type="email" name="datos" id="email" placeholder="Email">
