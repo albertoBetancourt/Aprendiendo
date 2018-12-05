@@ -18,7 +18,7 @@
             $respuesta = $hotel->validarUsuario($this->username, $this->contrasena);
             if($respuesta)
 			{
-				echo $_SESSION["usuarios"]["nombre"];
+				echo $_SESSION["nombre"];
 			}
 			else
 			{

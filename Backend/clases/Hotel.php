@@ -42,10 +42,10 @@
                     if($contrasenaReal == $contrasenia)
                     {
                         session_start();
-                        $_SESSION["usuarios"]["nombre"] = $row["nombre"];
-                        $_SESSION["usuarios"]["cedula"]= $row["cedula"];
-                        $_SESSION["usuarios"]["email"] = $row["email"];
-                        $_SESSION["usuarios"]["creado"] = true;
+                        $_SESSION['nombre'] = $row['nombre'];
+                        $_SESSION['cedula']= $row['cedula'];
+                        $_SESSION['email'] = $row['email'];
+                        $_SESSION['creado'] = true;
                         return true;
                     }
                     else
@@ -91,33 +91,29 @@
             }
         }
 
-        public function consultarPerfil($usuario)
-        {
-            $sql = "select * from usuarios where username = '".$usuario->getUsername()."' ";
-            $info = pg_query($this->connect->getRuta(), $sql);
-            if(!$info)
-            {
-                return json_encode("Error");
-            }
-            else
-            {
-                while ($row = pg_fetch_array($info))
-                {
-                    $usernameReal = "Username: ".$row['username'];
-                    $nombreReal = "Nombre: ".$row['nombre'];
-                    $apellidoReal = "Apellido: ".$row['apellido'];
-                    $ciudadReal = "Ciudad: ".$row['ciudad'];
-                    $paisReal = "Pais: ".$row['pais'];
-                    $fechaNacimientoReal = "Fecha de nacimiento: ".$row['fechanacimiento'];
-                    $emailReal = "Correo electrónico: ".$row['email'];
-                    $generoReal = "Género: ".$row['genero'];
-                    $cedulaReal = "Cédula: ".$row['cedula'];
+        public function consultarPerfil()
+		{
+			$usuario;
+            session_start();
+			$Sql="select * from usuarios where cedula = '".$_SESSION['cedula']."'";
+			$info=pg_query($this->connect->getRuta(),$Sql);
+			if($info)
+			{
+				while($row = pg_fetch_array($info))
+				{
+                    $cedula = $row['cedula'];
+                    $nombre = $row['nombre'];
+                    $username = $row['username'];
+                    $fechanacimiento = $row['fechanacimiento'];
+                    $ciudad = $row['ciudad'];
+                    $pais = $row['pais'];
 
-                    $datosUsuario = array($usernameReal, $nombreReal, $apellidoReal, $cedulaReal, $generoReal, $fechaNacimientoReal, $emailReal, $ciudadReal, $paisReal);
-                    return json_encode($datosUsuario);
-                }
+                    $datos = array($cedula,$nombre,$username,$fechanacimiento,$ciudad,$pais);
+
+				}
             }
-        }
+			return $datos;
+		}
         
     }
 

@@ -6,9 +6,10 @@
 		{
 			$modelo = new Hotel();
 			$respuesta = $modelo->consultarPerfil();
-			echo $respuesta;
+			echo json_encode($respuesta);
 		}
 	}
 	$obj = new ConsultaPerfil();
 	$obj->retornarPerfil();
+	
 ?>
