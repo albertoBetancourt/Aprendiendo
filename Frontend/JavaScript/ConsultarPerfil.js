@@ -1,16 +1,14 @@
 function consultar() {
-    reserva = document.getElementById("perfil").value;
-    $.post("../../Backend/controladores/ConsultaPerfil.php", {}, function (respuesta) {
-        var datasUsuario = eval(respuesta);
-        $("#a").text(datasUsuario[0]);
-        $("#b").text(datasUsuario[1]);
-        $("#c").text(datasUsuario[2]);
-        $("#d").text(datasUsuario[3]);
-        $("#e").text(datasUsuario[4]);
-        $("#f").text(datasUsuario[5]);
-        $("#g").text(datasUsuario[6]);
-        $("#h").text(datasUsuario[7]);
-        $("#i").text(datasUsuario[8]);
+    
+    $.post("../../Backend/controladores/ConsultarPerfil.php", {}, function (respuesta) {
+        var datosUsuario = eval(respuesta);
+        alert(datosUsuario);
+        $("#a").text("hola"+datosUsuario[0].username);
+        $("#b").text(datosUsuario[0].nombreCompleto);
+        $("#c").text(datosUsuario[0].cedula);
+        $("#d").text(datosUsuario[0].fechaDeNacimiento);
+        $("#e").text(datosUsuario[0].ciudad);
+        $("#f").text(datosUsuario[0].pais);
         alert("El servidor dice: " + respuesta);
     });
 }

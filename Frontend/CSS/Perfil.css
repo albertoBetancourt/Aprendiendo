@@ -1,0 +1,38 @@
+.Perfil
+{
+    border: 2px solid black;
+    width: 10vw;
+    height: 10vw;
+}
+
+.Foto
+{
+    width: 25%;
+    height: 12vw;
+    border: 2px solid black;
+}
+
+@media (min-width: 576px) and (max-width: 768px)
+{
+    .Perfil
+    {
+        width: 15vw;
+        height: 15vw; 
+    }    
+    .Foto
+    {
+        width: 33.3%;
+        height: 15vw;
+    }
+}
+
+@media (max-width: 575px)
+{
+    .Foto
+    {
+        width: 50%;
+        height: 30vw;
+    }
+    
+}
+

@@ -23,6 +23,6 @@ function verificarDatos ()
 			function(respuesta)
 			{
 				alert("El servidor dice: "+respuesta);
-				location.href = "../HTML/Comunidad.html";
+				location.href = "../HTML/Perfil.php";
 			});
 }
